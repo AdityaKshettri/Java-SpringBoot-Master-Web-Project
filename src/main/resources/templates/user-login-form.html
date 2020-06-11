@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>User Login Form</title>
+</head>
+
+<body>
+	<div class="container">
+		<h3>User Login Form</h3>
+		<hr>
+		
+		<form 
+			action="#" 
+			th:action="@{/user/login}" 
+			th:object="${theUser}" 
+			method="POST">
+			
+			<input 
+				type="text" 
+				th:field="*{username}" 
+				class="form-control mb-4 col-4" 
+				placeholder="Username" />
+				
+			<input 
+				type="password" 
+				th:field="*{password}" 
+				class="form-control mb-4 col-4" 
+				placeholder="Password" />
+				
+			<button type="submit" class="btn btn-info col-2">Login</button>
+			
+		</form>
+		
+		<hr>
+		<a th:href="@{/user/signup}">SignUp</a>
+	</div>
+</body>
+
+</html>
