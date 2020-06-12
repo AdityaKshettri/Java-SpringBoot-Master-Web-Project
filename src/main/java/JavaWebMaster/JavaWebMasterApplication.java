@@ -11,7 +11,7 @@ import JavaWebMaster.repository.BasicRepository;
 import JavaWebMaster.repository.UserRepository;
 
 @SpringBootApplication
-public class JavaMasterApplication implements CommandLineRunner {
+public class JavaWebMasterApplication implements CommandLineRunner {
 
 	@Autowired
 	private UserRepository userRepository;
@@ -20,7 +20,7 @@ public class JavaMasterApplication implements CommandLineRunner {
 	private BasicRepository basicRepository;
 	
 	public static void main(String[] args) {
-		SpringApplication.run(JavaMasterApplication.class, args);
+		SpringApplication.run(JavaWebMasterApplication.class, args);
 	}
 
 	@Override

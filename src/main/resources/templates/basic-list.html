@@ -31,6 +31,8 @@
 			<tr>
 				<th>Name</th>
 				<th>User</th>
+				<th></th>
+				<th></th>
 			</tr>
 		</thead>
 		
@@ -38,6 +40,8 @@
 			<tr th:each="temp : ${basics}">	
 				<td th:text="${temp.name}" />
 				<td th:text="${temp.owner.username}" />
+				<td><a th:href="@{'/basic/delete/'+${temp.id}}">Delete</a></td>
+				<td><a th:href="@{'/basic/formForEdit/'+${temp.id}}">Update</a></td>
 			</tr>
 		</tbody>		
 	</table>
